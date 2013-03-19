@@ -17,6 +17,7 @@ addtocron() {
 	sleep 1
 	echo "SHELL=/bin/sh" > $CRON
 	echo "0 0 * * * $LOCATION >/dev/null 2>&1" >> $CRON
+	service crond restart
 }
 
 install() {
